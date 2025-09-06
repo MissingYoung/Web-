@@ -1,0 +1,345 @@
+/* ========================================================================= */
+/* ---               挪威风格 - 子页面专题布局样式                 --- */
+/* ========================================================================= */
+/* 这个文件定义了所有主题子页面（如美食、景点等）的独特、沉浸式布局样式。*/
+
+
+/* --- 全局设置 --- */
+
+/* 移除 main 的默认内边距和样式，以便实现全宽效果 */
+main.theme-page-main {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #fff; /* 确保在没有背景色的区域显示白色 */
+}
+
+
+/* --- 模块一：全屏英雄区 --- */
+.theme-hero-fullbleed {
+    height: 100vh; /* 占据整个视口高度 */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* 隐藏溢出的视频/图片部分 */
+}
+
+.hero-background {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    width: 100%; 
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* 关键：视频/图片填满容器而不变形 */
+    z-index: 1; /* 设为我们组件的底层 */
+}
+
+/* 黑色遮罩层 */
+.theme-hero-fullbleed::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0, 0.35);
+    z-index: 2; /* 在图片之上 */
+}
+
+/* 标题等内容层 */
+.hero-content {
+    position: relative;
+    z-index: 3; /* 在所有图层之上 */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-title {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* 向下滚动箭头 */
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    font-size: 24px;
+    animation: bounce 2s infinite;
+    z-index: 3; /* 确保箭头在最上层 */
+}
+
+@keyframes bounce { /* 箭头上下跳动动画 */
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-8px); }
+}
+
+
+/* --- 模块二 & 三 & 四：统一的内容区域 --- */
+
+/* 为内容区提供统一的浅灰色背景和间距 */
+.content-section {
+    padding: 80px 0;
+    background-color: #cbe0dc;
+    border-bottom: 1px solid #e8f0e9; /* 在模块间添加一个细微的分隔线 */
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+/* 移除 intro-section 和 highlight-section-modern 的独立 padding 和 bg-color，因为它们已被 .content-section 包含 */
+.intro-section, .highlight-section-modern {
+    padding: 0;
+    background-color: transparent;
+}
+
+/* 子导航栏样式调整 */
+.intro-section .sub-nav {
+    margin-top: 60px; /* 调整子导航与引言的间距 */
+    border: none;
+    background-color: transparent;
+}
+
+
+/* --- 精致排版细节 --- */
+
+/* 引言区域容器 */
+.container-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.intro-text {
+    font-family: 'Noto Serif SC', serif; /* 引言也使用宋体 */
+    font-size: 24px;
+    line-height: 1.8;
+    text-align: center;
+    color: #333;
+}
+
+/* 正文区域容器 */
+.container-text {
+    max-width: 720px; /* 优化阅读宽度 (约80ch) */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.theme-article h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #212529;
+}
+
+.theme-article p {
+    font-size: 18px;
+    line-height: 2; /* 增加行高，阅读更舒适 */
+    text-align: justify;
+    margin-bottom: 2em;
+    color: #495057;
+}
+
+/* --- 优化全宽图片的布局，解决突兀感 --- */
+
+.container-media {
+    max-width: 1200px; /* 让图片容器比文字容器更宽，形成节奏感 */
+    margin: 40px auto; /* 上下留出足够间距 */
+    padding: 0 15px;
+}
+
+.full-width-image {
+    margin: 0;
+    border-radius: 8px; /* 给图片一个细微的圆角 */
+    overflow: hidden; /* 确保圆角生效 */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* 添加柔和的阴影 */
+}
+
+.full-width-image figcaption {
+    display: block;
+    background-color: #fff; /* 给图片说明一个白色背景，与灰色内容区形成对比 */
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #777;
+    text-align: right; /* 文字靠右，更有设计感 */
+}
+
+
+/* --- 优化亮点推荐卡片区 --- */
+
+.highlight-section-modern .section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #212529;
+}
+
+/* 卡片本身的样式 (.modern-card, etc.) 从之前的代码继承，它们已经很好了 */
+.modern-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.modern-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 16/ 9;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+}
+.modern-card:hover {
+    transform: scale(1.03);
+}
+.modern-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.modern-card:hover img {
+    transform: scale(1.1);
+}
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.card-overlay h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* --- 响应式调整 --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    .intro-text, .theme-article p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .theme-article h2, .highlight-section-modern .section-title {
+        font-size: 28px;
+    }
+    .content-section {
+        padding: 60px 0;
+    }
+}
+
+/* --- 模块五：美食详情列表 (Dish Details List) --- */
+
+.dish-details-section .section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 60px; /* 增加标题与列表的间距 */
+    color: #212529;
+}
+
+.dish-list-container {
+    max-width: 720px; /* 列表内容宽度与正文保持一致 */
+    margin: 0 auto;
+}
+
+.dish-item {
+    /* 在每个美食项之间添加一个优雅的分隔线 */
+    border-top: 1px solid #dee2e6;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.dish-list-container .dish-item:first-child {
+    border-top: none; /* 第一个项目不需要上边框 */
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.dish-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    text-align: center; /* 按要求居中对齐 */
+    margin: 0 0 25px 0;
+    color: #343a40;
+}
+
+/* 为“出处”添加独特的样式 */
+.dish-origin {
+    font-family: 'Source Han Sans CN', sans-serif; /* 使用正文黑体 */
+    font-size: 18px;
+    font-weight: 500; /* 使用细字体 */
+    color: #343a40;
+    opacity: 0.85; /* 关键：通过降低不透明度来让它在视觉上“退后”，比直接用灰色更现代 */
+    margin-left: 8px;
+    font-style: italic; /* 斜体以示区别 */
+}
+
+.dish-image {
+    display: block;
+    max-width: 100%; /* 图片最大宽度不超过容器 */
+    margin: 0 auto 25px auto; /* 居中显示，并与上下文保持间距 */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dish-image img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.dish-description {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #343a40;
+    text-align: justify;
+}
+
+
+/* --- 大卡片 & 内部内容区样式 --- */
+
+/* 1. 左侧内容区，即我们的“大卡片” */
+.theme-main-content {
+    flex: 4; /* 占据约 3/4 空间 */
+    background-color: #f5fbf8; /* 按要求使用浅绿色背景 */
+    border-radius: 16px; /* 圆角矩形 */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* 添加柔和的阴影 */
+    padding: 20px; /* 给卡片一个内边距 */
+}
+
+/* 2. 移除被移入卡片内的 section 的原有样式，避免双重背景和边框 */
+.theme-main-content .content-section {
+    padding: 20px 0 0 0; /* 调整内部 section 的内边距 */
+    background-color: transparent; /* 背景设为透明 */
+    border-bottom: none; /* 移除边框 */
+}
+
+/* 3.  调整卡片内标题的大小 */
+.theme-main-content .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* --- 响应式调整 --- */
+@media (max-width: 768px) { 
+    /* 将断点设为 768px，适用于大多数平板竖屏和手机 */
+    .modern-cards-container {
+        grid-template-columns: 1fr; /* 强制变为单列布局 */
+        gap: 25px;
+    }
+}
