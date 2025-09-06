@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ▼▼▼ 修改标题 ▼▼▼ -->
+    <title>关于我们 - 我的网站</title>
+    <!--在这里引入 Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+       <!-- ▼▼▼ 引入拆分后的多个CSS文件 ▼▼▼ -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- ▲▲▲ 链接顺序很重要 ▲▲▲ -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+                <h1>彩云之南欢迎您！</h1>
+                 <!-- ▼▼▼ 搜索框 ▼▼▼ -->
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <!-- ▲▲▲ 搜索框结束 ▲▲▲ -->
+              <!-- 导航栏保持不变 -->
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            
+
+        </div>
+       
+       
+    </header>
+
+
+<main>
+    <div class="container container-wide">
+        <!-- 页面标题和介绍保持不变 -->
+        <h2>关于我们的故事</h2>
+        <p>我们相信，每一次旅行都是一次探索。这里是我们想要分享的一些核心理念和故事。</p>
+         <div class="about-layout">
+        <!-- ▼▼▼ 左右分栏的主布局容器 ▼▼▼ -->
+        <div class="about-layout">
+
+            <!-- 1. 左侧栏：放置所有的内容卡片 -->
+            <div class="about-main-content">
+                <!-- 卡片 1: 文字在左，图片在右 -->
+                <div class="info-card">
+                    <div class="info-card-text">
+                        <h3>探索美食的真谛</h3>
+                        <p>我们不仅仅是寻找美味，更是追寻食物背后的文化与人情。从街头小吃到米其林餐厅，每一口都蕴含着一个独特的故事。</p>
+                        <a href="theme_food.html" class="card-button">查看美食攻略</a>
+                    </div>
+                    <div class="info-card-image">
+                        <img src="images/slide-2.jpg" alt="诱人的美食">
+                    </div>
+                </div>
+
+                <!-- 卡片 2: 图片在左，文字在右 -->
+                <div class="info-card">
+                    <div class="info-card-text">
+                        <h3>沉浸于绝美风光</h3>
+                        <p>从巍峨的山脉到宁静的海岸线，我们带您发现那些能让时间静止的风景。带上相机，和我们一起捕捉大自然的鬼斧神工。</p>
+                        <a href="theme_scenery.html" class="card-button">发现必游景点</a>
+                    </div>
+                    <div class="info-card-image">
+                        <img src="images/slide-1.jpg" alt="壮丽的风景">
+                    </div>
+                </div>
+                
+                <!-- 卡片 3: 文字在左，图片在右 -->
+                <div class="info-card">
+                     <div class="info-card-text">
+                        <h3>聆听人文的回响</h3>
+                        <p>历史与现代在这里交汇。我们深入城市的肌理，探寻那些被遗忘的角落和代代相传的人文故事，感受一个地方的灵魂。</p>
+                        <a href="theme_humanities.html" class="card-button">了解人文历史</a>
+                    </div>
+                    <div class="info-card-image">
+                        <img src="images/slide-3.jpg" alt="古老的建筑">
+                    </div>
+                </div>
+
+                <!-- 卡片 4: 图片在左，文字在右 (HTML结构不变，顺序由CSS控制) -->
+                <div class="info-card">
+                    
+                        <div class="info-card-text">
+                            <h3>感受文化遗产的美</h3>
+                            <p>摩挲粗糙石壁上的绝美壁画，临摹生动隽永的古老文字，发掘非物质文化遗产瑰宝</p>
+                            <a href="theme_culture.html" class="card-button">感受独特文化</a>
+                        </div>
+                        <div class="info-card-image">
+                            <img src="images/slide-4.jpg" alt="灿烂的文化">
+                        </div>
+
+                </div>
+            </div>
+                    <!-- 2. 右侧栏：放置新的垂直导航 (已更新为 Font Awesome 图标) -->
+                    <aside class="about-sidebar">
+                        <nav class="vertical-nav-card">
+                            <!-- 美食: 我们用 <i> 标签替换了原来的 <div> 和 <img> -->
+                            <a href="theme_food.html" class="nav-item">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span class="nav-item-text">美食寻味</span>
+                            </a>
+                            <!-- 景点 -->
+                            <a href="theme_scenery.html" class="nav-item">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <span class="nav-item-text">必游景点</span>
+                            </a>
+                            <!-- 人文 -->
+                            <a href="theme_humanities.html" class="nav-item">
+                                <i class="fa-solid fa-users"></i>
+                                <span class="nav-item-text">人文故事</span>
+                            </a>
+                            <!-- 文化 -->
+                            <a href="theme_culture.html" class="nav-item">
+                                <i class="fa-solid fa-palette"></i>
+                                <span class="nav-item-text">文化体验</span>
+                            </a>
+                        </nav>
+                    </aside>
+
+        </div>
+        <!-- ▲▲▲ 主布局容器结束 ▲▲▲ -->
+
+      </div>
+
+    </div>
+</main>
+   <footer>
+         <div class="container">
+            <p>© 202400300355</p>
+         </div>
+        
+    </footer>
+
+    <!-- 引入JavaScript文件，为高亮功能做准备 -->
+      <script src="search-data.js"></script> <!-- 必须在 script.js 之前引入 -->
+    <script src="script.js"></script>
+</body>
+</html>

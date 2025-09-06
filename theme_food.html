@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题已更新 -->
+    <title>美食寻味 - 彩云之南</title>
+    <!-- 引入所有CSS文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/theme-page.css"> 
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+    <!-- 页眉 -->
+    <header>
+        <div class="container">
+            <h1>彩云之南欢迎您！</h1>
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav> 
+        </div>
+    </header>
+
+
+
+    <main class="theme-page-main">
+
+    <!-- 模块一 & 二: 英雄区和引言区 -->
+    <section class="theme-hero-fullbleed">
+        <img src="images/food-head.jpg" alt="丰盛的云南美食" class="hero-background">
+        <div class="hero-content">
+            <h1 class="hero-title">舌尖上的云南</h1>
+            <p class="hero-subtitle">一场始于味蕾的七彩风情之旅</p>
+        </div>
+        <a href="#content-start" class="scroll-down-arrow" aria-label="滚动到内容区">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    <div id="content-start"></div>
+    <section class="content-section">
+        <div class="container-narrow">
+            <p class="intro-text">在云南，美食不仅仅是食物，它是一种文化，一种生活方式。从高山到河谷，从古城到雨林，多样的地理与民族，共同孕育了这片土地上无与伦比的味觉盛宴。</p>
+        </div>
+        <nav class="sub-nav">
+            <a href="theme_food.html" class="active">美食</a>
+            <a href="theme_scenery.html">景点</a>
+            <a href="theme_humanities.html">人文</a>
+            <a href="theme_culture.html">文化</a>
+        </nav>
+    </section>
+
+    <!-- 模块三: 核心故事区 -->
+    <section class="content-section">
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>菌的王国，鲜的极致</h2>
+                <p>雨季的云南，是菌子的天堂。当第一声春雷滚过山岗，松茸、鸡枞、牛肝菌便迫不及待地探出头来。当地人对菌子的热爱与了解深入骨髓，无论是简单的炭烤、浓郁的鸡汤，还是那一碗香气四溢的菌子火锅，都将“鲜”这个字发挥到了极致。这是一种来自大自然的馈赠，纯粹而又令人敬畏。</p>
+            </article>
+        </div>
+        <div class="container-media">
+            <figure class="full-width-image">
+                <img src="images/food-head-2.jpg" alt="云南壮丽的山水风光">
+                <figcaption>每一口鲜美，都源自这片纯净的山水</figcaption>
+            </figure>
+        </div>
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>酸与辣的交响</h2>
+                <p>沿着西南边境线，傣族的酸辣、景颇的香料、哈尼的醇厚，共同谱写了一曲味觉的交响乐。柠檬草的清香，小米辣的直接，搭配着烤鱼、手抓饭和各种奇特的蘸水（喃咪），每一道菜都是一次热情的问候。这种直击味蕾的体验，正是云南多元文化交融的生动写照。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- 全新的两栏布局容器 -->
+    <div class="container container-wide">
+        <div class="theme-detail-layout">
+
+            <!-- 1. 左侧：包含美食名录的“大卡片” -->
+            <div class="theme-main-content">
+                <section class="content-section dish-details-section">
+                    <div class="container">
+                        <h2 class="section-title">风味地理图鉴</h2>
+                        <div class="dish-list-container">
+                            <!-- 10个美食详情... -->
+                            <div class="dish-item" id="guoqiao-mixian"><h3 class="dish-name">过桥米线<span class="dish-origin">.红河</span></h3><figure class="dish-image"><img src="images/food-1.jpg" alt="过桥米线"></figure><p class="dish-description">这不只是一碗米线，更是一场充满仪式感的盛宴。滚烫的鸡汤如魔术般将生肉片、蔬菜瞬间烫熟，与顺滑的米线交融，汤鲜味美，营养丰富，是云南美食最富盛名的名片。</p></div>
+                            <div class="dish-item" id="qiguo-ji"><h3 class="dish-name">汽锅鸡<span class="dish-origin">.红河</span></h3><figure class="dish-image"><img src="images/food-2.jpg" alt="汽锅鸡"></figure><p class="dish-description">源自建水的独特烹饪技艺，不加一滴水，全靠蒸汽凝结成汤。鸡肉鲜嫩脱骨，汤汁清澈醇厚，原汁原味，是滋补养生的佳品，尽显滇菜的精妙与智慧。</p></div>
+                            <div class="dish-item" id="xuanwei-huotui"><h3 class="dish-name">宣威火腿<span class="dish-origin">.曲靖</span></h3><figure class="dish-image"><img src="images/food-3.jpg" alt="宣威火腿"></figure><p class="dish-description">与金华火腿、安福火腿齐名的中国三大名腿之一。色泽鲜红，咸香扑鼻，无论是切片生食，还是与菌子、蔬菜同炒共煮，那股独特的陈香都能瞬间唤醒味蕾。</p></div>
+                            <div class="dish-item" id="xianhua-bing"><h3 class="dish-name">鲜花饼<span class="dish-origin">.昆明</span></h3><figure class="dish-image"><img src="images/food-4.jpg" alt="鲜花饼"></figure><p class="dish-description">将可食用的玫瑰花瓣裹入酥皮，烘烤而成。外皮酥脆，内馅香甜，入口即是满腔的花香。这是云南独有的浪漫，是将春天吃进嘴里的甜蜜体验。</p></div>
+                            <div class="dish-item" id="daiwei-kaoyu"><h3 class="dish-name">傣味烤鱼<span class="dish-origin">.西双版纳</span></h3><figure class="dish-image"><img src="images/food-5.jpg" alt="傣味烤鱼"></figure><p class="dish-description">用香茅草、大芫荽等多种热带香料填满鱼腹，再用竹夹夹住，在炭火上慢慢烤制。鱼皮焦香，鱼肉细嫩，香料的味道完全渗入其中，充满了野性而迷人的东南亚风情。</p></div>
+                            <div class="dish-item" id="rushan"><h3 class="dish-name">乳扇<span class="dish-origin">.大理</span></h3><figure class="dish-image"><img src="images/food-6.jpg" alt="乳扇"></figure><p class="dish-description">大理白族的传统奶制品，形如折扇。可炸、可烤、可凉拌。烤乳扇刷上玫瑰糖，外脆内韧，奶香浓郁，是古城街头巷尾最常见的风味小吃。</p></div>
+                            <div class="dish-item" id="lijiang-baba"><h3 class="dish-name">丽江粑粑<span class="dish-origin">.丽江</span></h3><figure class="dish-image"><img src="images/food-7.jpg" alt="丽江粑粑"></figure><p class="dish-description">分为咸甜两种口味，用精制麦面和雪山泉水和面，在平底锅里反复煎烙而成。色泽金黄，口感酥脆，麦香十足，是茶马古道上流传下来的质朴美味。</p></div>
+                            <div class="dish-item" id="douhua-mixian"><h3 class="dish-name">豆花米线<span class="dish-origin">.昆明</span></h3><figure class="dish-image"><img src="images/food-8.jpg" alt="豆花米线"></figure><p class="dish-description">将嫩滑的豆花覆盖在煮好的米线上，再淋上甜酱油、辣油、花生碎、韭菜等多种佐料。口感丰富，咸、甜、麻、辣、香五味俱全，是昆明人早餐的挚爱。</p></div>
+                            <div class="dish-item" id="dajiujia"><h3 class="dish-name">大救驾<span class="dish-origin">.保山</span></h3><figure class="dish-image"><img src="images/food-9.jpg" alt="大救驾"></figure><p class="dish-description">即腾冲炒饵块，传说曾救过永历皇帝的驾而得名。将饵块切片，与火腿、鸡蛋、番茄、青菜一同爆炒，饵块软糯弹牙，配料鲜香，锅气十足。</p></div>
+                            <div class="dish-item" id="boluo-fan"><h3 class="dish-name">菠萝饭<span class="dish-origin">.西双版纳</span></h3><figure class="dish-image"><img src="images/food-10.jpg" alt="菠萝饭"></figure><p class="dish-description">将整个菠萝挖空作为容器，填入浸泡过的糯米，与菠萝果肉一同蒸熟。米饭吸收了菠萝的果香，酸甜软糯，是热带风情的完美体现。</p></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2. 右侧：垂直导航侧边栏 -->
+            <aside class="theme-sidebar">
+                <nav class="vertical-nav-card">
+                    <a href="theme_food.html" class="nav-item"><i class="fa-solid fa-utensils"></i><span class="nav-item-text">美食寻味</span></a>
+                    <a href="theme_scenery.html" class="nav-item"><i class="fa-solid fa-mountain-sun"></i><span class="nav-item-text">必游景点</span></a>
+                    <a href="theme_humanities.html" class="nav-item"><i class="fa-solid fa-users"></i><span class="nav-item-text">人文故事</span></a>
+                    <a href="theme_culture.html" class="nav-item"><i class="fa-solid fa-palette"></i><span class="nav-item-text">文化体验</span></a>
+                </nav>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 模块四：底部的亮点推荐卡片区 -->
+    <section class="highlight-section-modern content-section">
+        <div class="container container-cards">
+            <h2 class="section-title">四大风味之巅</h2>
+            <div class="modern-cards-container">
+                <a href="#" class="modern-card"><img src="images/food-1.jpg" alt="过桥米线"><div class="card-overlay"><h3>过桥米线</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/slide-2.jpg" alt="菌子火锅"><div class="card-overlay"><h3>野生菌火锅</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/food-5.jpg" alt="傣味烧烤"><div class="card-overlay"><h3>傣味烧烤</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/food-2.jpg" alt="汽锅鸡"><div class="card-overlay"><h3>汽锅鸡</h3></div></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container">
+             <p>© 202400300355</p>
+        </div>
+    </footer>
+
+    <!-- 引入JS文件 -->
+    <script src="search-data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

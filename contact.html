@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 我的网站</title>
+        <!-- ▼▼▼ 引入拆分后的多个CSS文件 ▼▼▼ -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- ▲▲▲ 链接顺序很重要 ▲▲▲ -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>彩云之南欢迎您！</h1>
+            <!-- ▼▼▼ 搜索框 ▼▼▼ -->
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <!-- ▲▲▲ 搜索框结束 ▲▲▲ -->
+             
+            <!-- 导航栏保持不变 -->
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav> 
+
+            
+
+        </div>
+       
+    </header>
+
+    <main>
+         <div class="container">
+                <!-- ▼▼▼ 修改主要内容 ▼▼▼ -->
+            <h2>联系我们</h2>
+            <p>你可以通过以下方式联系我，我会第一时间回复你。</p>
+             <!-- ▼▼▼ 这里是表单 ▼▼▼ -->
+              <form id="contact-form" action="#" method="post" class="contact-form">
+                <table>
+                    <!--姓名行-->
+                    <tr>
+                        <td><label for="name">您的姓名：</label></td>
+                        <td><input type="text" id="name" name="user-name" required placeholder="请输入您的姓名"></td>
+                    </tr>
+                    <!--邮箱行-->
+                    <tr>
+                        <td><label for="email">您的邮箱：</label></td>
+                        <td><input type="email" id="email" name="user-email" required placeholder="例如：your.email@example.com">
+                        <!-- ▼▼▼ 新增：用于显示邮箱错误提示的容器 ▼▼▼ -->
+                            <small id="email-error" class="error-message"></small>
+                        </td>
+
+                    </tr>
+                     <!--电话号码行-->
+                    <tr>
+                        <td><label for="phone">您的电话：</label></td>
+                        <td>
+                            <!-- 
+                                type="tel" 是专门为电话号码设计的输入类型。
+                                在移动设备上，它会优先弹出数字键盘，提升用户体验。
+                                pattern="[0-9]{11}" 是HTML5自带的验证，但我们仍需JS来做更友好的提示。
+                            -->
+                            <input type="tel" id="phone" name="user-phone" pattern="[0-9]{11}" placeholder="请输入11位手机号码">
+                            <!-- 用于显示电话号码错误提示的容器 -->
+                            <small id="phone-error" class="error-message"></small>
+                        </td>
+                    </tr>
+                    <!-- 电话号码行结束 -->
+                    <!--主题行-->
+                    <tr>
+                        <td><label for="subject">主题：</label></td>
+                        <td>
+                            <!-- 1. 自定义下拉框的容器 -->
+                            <div class="custom-dropdown">
+                                <!-- 2. 显示当前选项的触发器 -->
+                                <div class="dropdown-toggle" tabindex="0">请选择一个或者多个主题</div>
+                                <!-- 3. 悬停时显示的选项列表 -->
+                                <ul class="dropdown-menu">
+                                    <li>美食</li>
+                                    <li>景点</li>
+                                    <li>人文</li>
+                                    <li>文化</li>
+                                    <!-- 以后在这里直接添加新的 <li> 即可 -->
+                                </ul>
+                                <!-- 4. 用于存储和提交表单数据的隐藏输入框 -->
+                                <input type="hidden" id="subject" name="user-subject" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- 留言行 -->
+                    <tr>
+                        <td><label for="message">留言内容：</label></td>
+                        <td><textarea id="message" name="user_message" rows="6" required placeholder="请在此处输入您的留言..."></textarea></td>
+                    </tr>
+                    <!-- 提交按钮行 -->
+                    <tr>
+                        <td></td> <!-- 留空一格用于对齐 -->
+                        <td><button type="submit">发送消息</button></td>
+                    </tr>
+                </table>
+              </form>
+              <!--表单结束-->
+         </div>
+       
+    </main>
+
+    <footer>
+        <div class="container">
+             <p>© 202400300355</p>
+        </div>
+       
+    </footer>
+    <!--引入JavaScript文件-->
+     <script src="search-data.js"></script> <!-- 必须在 script.js 之前引入 -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题为景点主题 -->
+    <title>必游景点 - 彩云之南</title>
+    <!-- 引入所有CSS文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/theme-page.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+    <!-- 页眉保持不变 -->
+    <header>
+        <div class="container">
+            <h1>彩云之南欢迎您！</h1>
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav> 
+        </div>
+    </header>
+
+    <!-- ===== 景点主题页面主体内容开始 ===== -->
+   <main class="theme-page-main">
+
+    <!-- 模块一 & 二: 英雄区和引言区 -->
+    <section class="theme-hero-fullbleed">
+        <img src="images/scenery-head.jpg" alt="云南壮丽的山水风光" class="hero-background">
+        <div class="hero-content">
+            <h1 class="hero-title">心之所向，彩云之境</h1>
+            <p class="hero-subtitle">从雪山到雨林，每一帧都是自然的杰作</p>
+        </div>
+        <a href="#content-start" class="scroll-down-arrow" aria-label="滚动到内容区">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    <div id="content-start"></div>
+    <section class="content-section">
+        <div class="container-narrow">
+            <p class="intro-text">云南的风景，是一首写给大地的诗。这里有神圣的雪山、宁静的古镇、深邃的峡谷和热情的热带雨林。踏上这片土地，就是开启一场与自然和灵魂的对话。</p>
+        </div>
+        <nav class="sub-nav">
+            <a href="theme_food.html">美食</a>
+            <a href="theme_scenery.html" class="active">景点</a>
+            <a href="theme_humanities.html">人文</a>
+            <a href="theme_culture.html">文化</a>
+        </nav>
+    </section>
+
+    <!-- 模块三: 核心故事区 -->
+    <section class="content-section">
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>雪山与湖泊的呼唤</h2>
+                <p>在滇西北，玉龙雪山与梅里雪山终年积雪，它们的圣洁与巍峨吸引着无数朝圣者与徒步爱好者。山脚下，是如蓝宝石般镶嵌在大地上的泸沽湖与洱海。在这里，时间仿佛放慢了脚步，你可以泛舟湖上，或是在湖边的客栈醒来，看第一缕阳光染金雪山之巅。</p>
+            </article>
+        </div>
+        <div class="container-media">
+            <figure class="full-width-image">
+                <img src="images/scenery-head-2.jpg" alt="宁静的湖泊与远山">
+                <figcaption>光影流转，辉煌的日照金山</figcaption>
+            </figure>
+        </div>
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>古城的温柔时光</h2>
+                <p>丽江的石板路、大理的白族民居、建水的古老宅院，它们是时光的见证者。漫步其中，小桥流水人家的景致随处可见，空气中弥漫着慵懒与闲适。这些古城不仅仅是旅游目的地，更是一种可以沉浸其中、慢慢品味的生活方式。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- 全新的两栏布局容器 -->
+    <div class="container container-wide">
+        <div class="theme-detail-layout">
+
+            <!-- 1. 左侧：包含景点名录的“大卡片” -->
+            <div class="theme-main-content">
+                <section class="content-section dish-details-section">
+                    <div class="container">
+                        <h2 class="section-title">云南风光地标</h2>
+                        <div class="dish-list-container">
+                            <!-- 10个景点详情... -->
+                            <div class="dish-item" id="lijiang-gucheng"><h3 class="dish-name">丽江古城<span class="dish-origin">.丽江</span></h3><figure class="dish-image"><img src="images/scenery-1.jpg" alt="丽江古城"></figure><p class="dish-description">联合国教科文组织世界文化遗产，以其无城墙的独特设计、古朴的纳西族建筑和四通八达的水系而闻名。夜晚的古城灯火阑珊，酒吧街的歌声与潺潺流水声交织，构成一幅动人的画卷。</p></div>
+                            <div class="dish-item" id="yulong-xueshan"><h3 class="dish-name">玉龙雪山<span class="dish-origin">.丽江</span></h3><figure class="dish-image"><img src="images/scenery-2.jpg" alt="玉龙雪山"></figure><p class="dish-description">纳西族的神山，由13座雪峰组成，主峰扇子陡终年积雪，宛如一条银色巨龙。乘坐大索道可直达海拔4506米的冰川公园，近距离感受雪山的壮丽与纯净。</p></div>
+                            <div class="dish-item" id="erhai"><h3 class="dish-name">洱海<span class="dish-origin">.大理</span></h3><figure class="dish-image"><img src="images/scenery-3.jpg" alt="洱海"></figure><p class="dish-description">风花雪月四景之一的“洱海月”，是云南第二大高原湖泊。最经典的体验莫过于沿环海路骑行或自驾，苍山为伴，海风拂面，沿途的白族村落和S湾等网红打卡点风光无限。</p></div>
+                            <div class="dish-item" id="pudacuo-guojiagongyuan"><h3 class="dish-name">普达措国家公园<span class="dish-origin">.迪庆</span></h3><figure class="dish-image"><img src="images/scenery-4.jpg" alt="普达措国家公园"></figure><p class="dish-description">中国大陆第一个国家公园，位于香格里拉。“普达措”意为“普度众生、到达理想彼岸的舟湖”，拥有镜子般的湖泊、水草丰美的牧场和原始森林，是心灵的净化之地。</p></div>
+                            <div class="dish-item" id="redai-zhiwuyuan"><h3 class="dish-name">中科院热带植物园<span class="dish-origin">.西双版纳</span></h3><figure class="dish-image"><img src="images/scenery-5.jpg" alt="热带植物园"></figure><p class="dish-description">中国面积最大、物种最丰富的植物园。漫步其中，可以见到跳舞草、绞杀榕、王莲等各种奇花异草，仿佛进入了一个现实版的“阿凡达”世界，是科普与猎奇的绝佳去处。</p></div>
+                            <div class="dish-item" id="yuanyang-titian"><h3 class="dish-name">元阳哈尼梯田<span class="dish-origin">.红河</span></h3><figure class="dish-image"><img src="images/scenery-6.jpg" alt="元阳梯田"></figure><p class="dish-description">哈尼族人历时1300多年开垦出的农业奇观，是世界文化遗产。每年冬春季节，灌水的梯田在阳光下变幻出万千色彩，如同大地的调色盘，是摄影爱好者的天堂。</p></div>
+                            <div class="dish-item" id="hutiao-xia"><h3 class="dish-name">虎跳峡<span class="dish-origin">.迪庆</span></h3><figure class="dish-image"><img src="images/scenery-7.jpeg" alt="虎跳峡"></figure><p class="dish-description">世界上最深的大峡谷之一，以其“险”而闻名。金沙江水在这里被玉龙、哈巴两大雪山挤压，江面最窄处仅30余米，江水奔腾咆哮，气势磅礴，令人震撼。</p></div>
+                            <div class="dish-item" id="shilin"><h3 class="dish-name">石林风景区<span class="dish-origin">.昆明</span></h3><figure class="dish-image"><img src="images/scenery-8.jpg" alt="石林"></figure><p class="dish-description">典型的喀斯特地貌奇观，被誉为“天下第一奇观”。无数石峰、石柱、石笋拔地而起，构成一片广袤的“石头森林”。穿行其间，仿佛置身于一个奇幻的迷宫。</p></div>
+                            <div class="dish-item" id="luguhu"><h3 class="dish-name">泸沽湖<span class="dish-origin">.丽江</span></h3><figure class="dish-image"><img src="images/scenery-9.jpg" alt="泸沽湖"></figure><p class="dish-description">川滇两省共辖，以其绝美的湖光山色和独特的摩梭“走婚”文化而闻名。湖水清澈见底，乘坐猪槽船在湖上漂荡，探访里格半岛，感受那份远离尘嚣的宁静。</p></div>
+                            <div class="dish-item" id="puzhehei"><h3 class="dish-name">普者黑<span class="dish-origin">.文山</span></h3><figure class="dish-image"><img src="images/scenery-10.jpg" alt="普者黑"></figure><p class="dish-description">彝语意为“盛满鱼虾的池塘”，是典型的喀斯特湿地田园风光。夏日里，万亩荷花竞相开放，乘坐柳叶舟穿行其间，打一场欢乐的水仗，是体验普者黑的最佳方式。</p></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2. 右侧：垂直导航侧边栏 -->
+            <aside class="theme-sidebar">
+                <nav class="vertical-nav-card">
+                    <a href="theme_food.html" class="nav-item"><i class="fa-solid fa-utensils"></i><span class="nav-item-text">美食寻味</span></a>
+                    <a href="theme_scenery.html" class="nav-item"><i class="fa-solid fa-mountain-sun"></i><span class="nav-item-text">必游景点</span></a>
+                    <a href="theme_humanities.html" class="nav-item"><i class="fa-solid fa-users"></i><span class="nav-item-text">人文故事</span></a>
+                    <a href="theme_culture.html" class="nav-item"><i class="fa-solid fa-palette"></i><span class="nav-item-text">文化体验</span></a>
+                </nav>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 模块四：底部的亮点推荐卡片区 -->
+    <section class="highlight-section-modern content-section">
+        <div class="container container-cards">
+            <h2 class="section-title">四大必游胜地</h2>
+            <div class="modern-cards-container">
+                <a href="#" class="modern-card"><img src="images/scenery-1.jpg" alt="丽江古城"><div class="card-overlay"><h3>丽江古城</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/scenery-2.jpg" alt="玉龙雪山"><div class="card-overlay"><h3>玉龙雪山</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/scenery-3.jpg" alt="洱海"><div class="card-overlay"><h3>大理洱海</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/scenery-6.jpg" alt="元阳梯田"><div class="card-overlay"><h3>元阳梯田</h3></div></a>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- 页脚保持不变 -->
+    <footer>
+        <div class="container">
+             <p>© 202400300355</p>
+        </div>
+    </footer>
+
+    <!-- 引入JS文件 -->
+    <script src="search-data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

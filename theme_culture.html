@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题已为文化主题 -->
+    <title>文化体验 - 彩云之南</title>
+    <!-- 引入所有CSS文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/theme-page.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+    <!-- 页眉保持不变 -->
+    <header>
+        <div class="container">
+            <h1>彩云之南欢迎您！</h1>
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav> 
+        </div>
+    </header>
+
+
+    <!-- ===== 文化主题页面主体内容开始 ===== -->
+    <main class="theme-page-main">
+
+    <!-- 模块一 & 二: 英雄区和引言区保持不变 -->
+    <section class="theme-hero-fullbleed">
+        <img src="images/culture-head.jpg" alt="古老的文化图腾" class="hero-background">
+        <div class="hero-content">
+            <h1 class="hero-title">流淌的千年文脉</h1>
+            <p class="hero-subtitle">触摸云南非物质文化遗产的灵魂与温度</p>
+        </div>
+        <a href="#content-start" class="scroll-down-arrow" aria-label="滚动到内容区">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    <div id="content-start"></div>
+    <section class="content-section">
+        <div class="container-narrow">
+            <p class="intro-text">云南的文化，如同一座富饶的矿藏，深邃而璀璨。它不仅存在于博物馆的展柜里，更活在人们的口传心授、指尖技艺和庄严的仪式之中。这些非物质文化遗产，是云南人精神世界的基石。</p>
+        </div>
+        <nav class="sub-nav">
+            <a href="theme_food.html">美食</a>
+            <a href="theme_scenery.html">景点</a>
+            <a href="theme_humanities.html">人文</a>
+            <a href="theme_culture.html" class="active">文化</a>
+        </nav>
+    </section>
+
+    <!-- 模块三: 核心故事区保持不变 -->
+    <section class="content-section">
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>史诗与传说的回响</h2>
+                <p>在文字尚未普及的年代，史诗和传说是民族记忆的唯一载体。彝族的《阿诗玛》、傣族的《召树屯与喃木诺娜》、傈僳族的《创世纪》，这些英雄的传说和创世的神话，通过一代代毕摩和歌手的吟唱，跨越时空，至今仍在山谷间回响，塑造着每个民族的精神品格。</p>
+            </article>
+        </div>
+        <div class="container-media">
+            <figure class="full-width-image">
+                <img src="images/culture-head-2.jpg" alt="讲述故事的长者">
+                <figcaption>口传心授，是文化最温暖的传承方式</figcaption>
+            </figure>
+        </div>
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>指尖上的智慧</h2>
+                <p>云南的文化，也体现在精妙绝伦的手工技艺中。白族扎染的蓝白之梦，彝族撒尼刺绣的绚烂色彩，建水紫陶的温润如玉，每一件作品都不仅仅是商品，更是匠人情感与生活哲学的物化。它们是实用的艺术，也是可以带回家的云南记忆。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ▼▼▼ 全新的两栏布局容器 ▼▼▼ -->
+    <div class="container container-wide">
+        <div class="theme-detail-layout">
+
+            <!-- 1. 左侧：包含文化瑰宝详情的“大卡片” -->
+            <div class="theme-main-content">
+                <section class="content-section dish-details-section">
+                    <div class="container">
+                        <h2 class="section-title">云南文化瑰宝</h2>
+                        <div class="dish-list-container">
+                            
+                            <!-- 1. 东巴古籍文献 -->
+                            <div class="dish-item" id="lijiang-naxizu-dongbagujiwenxian">
+                                <h3 class="dish-name">丽江.纳西族.东巴古籍文献<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-1.jpg" alt="东巴古籍"></figure>
+                                <p class="dish-description">世界记忆遗产，是东巴教的经书。它使用东巴象形文字书写，内容涵盖天文、地理、哲学、神话、医药等，是研究纳西族古代社会的百科全书。每一页手抄的经书，都是一件珍贵的艺术品。</p>
+                            </div>
+
+                            <!-- 2. 白族扎染技艺 -->
+                            <div class="dish-item" id="dali-baizu-zaranjiyi">
+                                <h3 class="dish-name">大理.白族.扎染技艺<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-2.jpg" alt="白族扎染"></figure>
+                                <p class="dish-description">国家级非物质文化遗产。工匠用针线在白布上缝扎出各种图案，然后放入板蓝根制成的染料中浸染。拆开线结后，未被染色的部分呈现出蓝底白花的奇妙图案，每一件都独一无二，充满了自然的意趣。</p>
+                            </div>
+
+                            <!-- 3. 建水紫陶烧制技艺 -->
+                            <div class="dish-item" id="honghe-jianshui-jianshuizitaoshaozhijiyi">
+                                <h3 class="dish-name">红河.建水.建水紫陶烧制技艺<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-3.jpg" alt="建水紫陶"></figure>
+                                <p class="dish-description">中国四大名陶之一，以其“无釉磨光”的独特工艺而著称。陶器表面结合了书法、绘画等艺术形式，经过精细打磨后，呈现出温润如玉、光亮如镜的质感，所谓“体如铁、色如铜、音如磐、亮如镜”。</p>
+                            </div>
+
+                            <!-- 4. 傣族剪纸 -->
+                            <div class="dish-item" id="dehong-daizu-jianzhiyishu">
+                                <h3 class="dish-name">德宏.傣族.剪纸艺术<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-4.jpg" alt="傣族剪纸"></figure>
+                                <p class="dish-description">多用于装饰和节庆，题材广泛，包括神话传说、动物图腾、花草树木等。傣族剪纸线条流畅，构图饱满，风格奔放而细腻，具有极高的艺术价值，常被用作佛教寺院的装饰。</p>
+                            </div>
+
+                            <!-- 5. 彝族海菜腔 -->
+                            <div class="dish-item" id="chuxiong-yizu-haicaiqiang">
+                                <h3 class="dish-name">楚雄.彝族.海菜腔<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-5.jpg" alt="彝族对歌"></figure>
+                                <p class="dish-description">彝族支系尼苏人的一种多声部民歌，被誉为“彝族歌舞的活化石”。其特点是男女对唱，旋律优美高亢，和声复杂和谐，歌词多为即兴创作，生动地反映了彝族人民的生产生活和爱情故事。</p>
+                            </div>
+
+                            <!-- 6. 藏族格萨尔史诗 -->
+                            <div class="dish-item" id="diqing-zangzu-gesaerwangchuanshuo">
+                                <h3 class="dish-name">迪庆.藏族.格萨尔王传说<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-6.jpg" alt="藏族说唱艺人"></figure>
+                                <p class="dish-description">世界上最长的活态史诗，讲述了英雄格萨尔王降妖伏魔、统一各部的丰功伟绩。在迪庆藏区，至今仍有许多优秀的格萨尔说唱艺人，他们以惊人的记忆力和艺术表现力，将这部宏大的史诗代代相传。</p>
+                            </div>
+
+                            <!-- 7. 普洱茶制作技艺 -->
+                            <div class="dish-item" id="puer-duominzu-puerchazhizuojiyi">
+                                <h3 class="dish-name">普洱.多民族.普洱茶制作技艺<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-7.jpg" alt="普洱茶饼"></figure>
+                                <p class="dish-description">一项人类非物质文化遗产代表作。它涵盖了从古茶园的管理、茶叶的采摘，到杀青、揉捻、晒干、蒸压成型等一系列传统工艺，以及与之相关的“茶马古道”等历史文化，是人与自然和谐共生的典范。</p>
+                            </div>
+
+                            <!-- 8. 阿诗玛传说 -->
+                            <div class="dish-item" id="kunming-saniren-yizu-ashimachuanshuo">
+                                <h3 class="dish-name">昆明.撒尼人(彝族).阿诗玛传说<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-8.jpg" alt="石林中的阿诗玛化身石"></figure>
+                                <p class="dish-description">彝族撒尼人的经典长篇叙事诗，讲述了美丽善良的姑娘阿诗玛不畏强权、追求爱情自由的动人故事。这个传说与石林的奇特景观紧密结合，成为了当地文化的核心标志。</p>
+                            </div>
+
+                            <!-- 9. 傣族章哈 -->
+                            <div class="dish-item" id="xishuangbanna-daizu-zhanghayanchang">
+                                <h3 class="dish-name">西双版纳.傣族.章哈演唱<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-9.jpg" alt="傣族艺人"></figure>
+                                <p class="dish-description">“章哈”意为“知识渊博的歌手”，是傣族传统的说唱艺术形式。章哈艺人手持乐器，即兴编词，演唱内容包罗万象，从历史神话到社会生活，是傣族人民重要的文化娱乐和知识传播方式。</p>
+                            </div>
+
+                            <!-- 10. 傈僳族阔时节 -->
+                            <div class="dish-item" id="nujiang-lisuzu-kuoshijie">
+                                <h3 class="dish-name">怒江.傈僳族.阔时节<span class="dish-origin"></span></h3>
+                                <figure class="dish-image"><img src="images/culture-10.jpg" alt="傈僳族节日"></figure>
+                                <p class="dish-description">傈僳族最隆重的新年节日，意为“岁首”。节日期间，人们会举行“上刀山、下火海”等惊险奇特的传统表演，以显示勇敢和祈求平安。此外，还有荡秋千、对歌、同心酒等丰富多彩的庆祝活动。</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2. 右侧：垂直导航侧边栏 -->
+            <aside class="theme-sidebar">
+                <nav class="vertical-nav-card">
+                    <a href="theme_food.html" class="nav-item">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span class="nav-item-text">美食寻味</span>
+                    </a>
+                    <a href="theme_scenery.html" class="nav-item">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                        <span class="nav-item-text">必游景点</span>
+                    </a>
+                    <a href="theme_humanities.html" class="nav-item">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="nav-item-text">人文故事</span>
+                    </a>
+                    <a href="theme_culture.html" class="nav-item">
+                        <i class="fa-solid fa-palette"></i>
+                        <span class="nav-item-text">文化体验</span>
+                    </a>
+                </nav>
+            </aside>
+
+        </div>
+    </div>
+    <!-- ▲▲▲ 两栏布局容器结束 ▲▲▲ -->
+
+    <!-- 模块四：底部的亮点推荐卡片区，它依然保持全宽背景 -->
+    <section class="highlight-section-modern content-section">
+        <div class="container container-cards">
+            <h2 class="section-title">四大文化体验</h2>
+            <div class="modern-cards-container">
+                <!-- 卡片 1: 东巴文化 -->
+                <a href="#" class="modern-card">
+                    <img src="images/culture-1.jpg" alt="东巴文字">
+                    <div class="card-overlay"><h3>体验东巴象形文字</h3></div>
+                </a>
+                <!-- 卡片 2: 扎染 -->
+                <a href="#" class="modern-card">
+                    <img src="images/culture-2.jpg" alt="扎染布匹">
+                    <div class="card-overlay"><h3>亲手制作白族扎染</h3></div>
+                </a>
+                <!-- 卡片 3: 建水紫陶 -->
+                <a href="#" class="modern-card">
+                    <img src="images/culture-3.jpg" alt="紫陶茶具">
+                    <div class="card-overlay"><h3>感受建水紫陶魅力</h3></div>
+                </a>
+                <!-- 卡片 4: 普洱茶 -->
+                <a href="#" class="modern-card">
+                    <img src="images/culture-7.jpg" alt="茶山">
+                    <div class="card-overlay"><h3>探秘普洱茶文化</h3></div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- 页脚保持不变 -->
+    <footer>
+        <div class="container">
+             <p>© 202400300355</p>
+        </div>
+    </footer>
+
+    <!-- 引入JS文件 -->
+    <script src="search-data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

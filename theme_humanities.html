@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题已为人文主题 -->
+    <title>人文故事 - 彩云之南</title>
+    <!-- 引入所有CSS文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/theme-page.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+    <!-- 页眉保持不变 -->
+    <header>
+        <div class="container">
+            <h1>彩云之南欢迎您！</h1>
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav> 
+        </div>
+    </header>
+
+  
+
+    <!-- ===== 人文主题页面主体内容开始 ===== -->
+    <main class="theme-page-main">
+
+    <!-- 模块一 & 二: 英雄区和引言区 -->
+    <section class="theme-hero-fullbleed">
+        <img src="images/human-head.jpg" alt="云南少数民族的节庆场面" class="hero-background">
+        <div class="hero-content">
+            <h1 class="hero-title">活着的风情画卷</h1>
+            <p class="hero-subtitle">探寻云南25个世居少数民族的斑斓故事</p>
+        </div>
+        <a href="#content-start" class="scroll-down-arrow" aria-label="滚动到内容区">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    <div id="content-start"></div>
+    <section class="content-section">
+        <div class="container-narrow">
+            <p class="intro-text">云南是中国的民族博物馆。在这里，不同的语言、服饰、信仰和习俗和谐共生，共同织就了一幅绚丽多彩的人文长卷。每一次探访，都是一次对古老智慧与生活哲学的致敬。</p>
+        </div>
+        <nav class="sub-nav">
+            <a href="theme_food.html">美食</a>
+            <a href="theme_scenery.html">景点</a>
+            <a href="theme_humanities.html" class="active">人文</a>
+            <a href="theme_culture.html">文化</a>
+        </nav>
+    </section>
+
+    <!-- 模块三: 核心故事区 -->
+    <section class="content-section">
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>歌舞与节庆的传承</h2>
+                <p>在云南，生活与艺术密不可分。几乎每个民族都有自己独特的歌舞和盛大的节日。这些节庆不仅是娱乐和社交的场合，更是民族历史、神话和价值观代代相传的活态载体。从火把节的狂欢到泼水节的祝福，每一次参与，都是对一种生命力的深刻体验。</p>
+            </article>
+        </div>
+        <div class="container-media">
+            <figure class="full-width-image">
+                <img src="images/human-head-2.jpg" alt="节日的盛装">
+                <figcaption>盛装之下，是民族的自豪与传承</figcaption>
+            </figure>
+        </div>
+        <div class="container-text">
+            <article class="theme-article">
+                <h2>手艺与匠心的温度</h2>
+                <p>千百年来，云南的少数民族用他们的双手创造了无数令人赞叹的物质文化。大理的扎染、鹤庆的银器、个旧的锡器、建水的紫陶……这些手工艺品不仅是日常生活的用具，更凝聚着匠人的心血与审美情趣，是触摸得到的历史与温度。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- 全新的两栏布局容器 -->
+    <div class="container container-wide">
+        <div class="theme-detail-layout">
+
+            <!-- 1. 左侧：包含民族文化详情的“大卡片” -->
+            <div class="theme-main-content">
+                <section class="content-section dish-details-section">
+                    <div class="container">
+                        <h2 class="section-title">民族风情一览</h2>
+                        <div class="dish-list-container">
+                            <!-- 8个民族文化详情... -->
+                            <div class="dish-item" id="xishuangbanna-daizu-poshuijie"><h3 class="dish-name">西双版纳.傣族.泼水节<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-1.jpeg" alt="泼水节"></figure><p class="dish-description">于每年公历四月中旬举行，是傣族最盛大的传统节日，也是傣历新年。人们用纯净的清水相互泼洒，意在洗去过去一年的不顺，迎来充满祝福和希望的新年。节日期间，还有赛龙舟、放高升等活动，场面热闹非凡。</p></div>
+                            <div class="dish-item" id="dali-baizu-sanyuejie"><h3 class="dish-name">大理.白族.三月街<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-2.jpeg" alt="三月街"></figure><p class="dish-description">又称“观音市”，是白族千年一遇的传统盛会。它起源于唐代，如今已发展成为集物资交流、文化娱乐、体育竞赛为一体的民族节日。赛马、对歌、交易药材和手工艺品，是三月街最核心的活动。</p></div>
+                            <div class="dish-item" id="chuxiong-yizu-huobajie"><h3 class="dish-name">楚雄.彝族.火把节<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-3.jpg" alt="火把节"></figure><p class="dish-description">被誉为“东方的狂欢节”，于每年农历六月二十四举行。白天有摔跤、斗牛、赛马等激烈活动；当夜幕降临，人们会点燃巨大的火把，围着篝火载歌载舞，祈求风调雨顺、五谷丰登。</p></div>
+                            <div class="dish-item" id="lijiang-naxizu-dongbawenhua"><h3 class="dish-name">丽江.纳西族.东巴文化<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-4.jpg" alt="东巴文"></figure><p class="dish-description">纳西族的古老传统文化，核心是东巴教和其使用的象形文字——东巴文，这是世界上唯一仍在使用的“活着的象形文字”。东巴文化包含了神话、史诗、舞蹈、音乐和祭祀仪式，是研究古代纳西族社会生活的珍贵“百科全书”。</p></div>
+                            <div class="dish-item" id="lijiang-mosuoren-zouhunxisu"><h3 class="dish-name">丽江.摩梭人.走婚习俗<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-5.jpg" alt="泸沽湖"></figure><p class="dish-description">生活在泸沽湖畔的摩梭人，至今仍保留着母系社会形态和独特的“走婚”习俗。男女双方“男不娶，女不嫁”，通过走婚建立情感关系，子女由女方家庭抚养。这种婚姻形式体现了对女性的尊重和独特的家庭观念。</p></div>
+                            <div class="dish-item" id="honghe-hanizu-changjieyan"><h3 class="dish-name">红河.哈尼族.长街宴<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-6.jpg" alt="长街宴"></figure><p class="dish-description">哈尼族的“昂玛突”节（即祭祀寨神和谷神）期间举行的盛大宴席。全村人将桌子一张张连接起来，摆在街心，形成数百米甚至上千米的长龙。人们分享食物，传递祝福，是哈尼族团结和睦的象征。</p></div>
+                            <div class="dish-item" id="diqing-zangzu-xianziwu"><h3 class="dish-name">迪庆.藏族.弦子舞<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-7.jpg" alt="弦子舞"></figure><p class="dish-description">香格里拉地区藏族人民生活中不可或缺的歌舞形式。舞者手持弦子（一种胡琴）边拉边唱边舞，舞步舒展、优雅，歌声高亢嘹亮。无论是在节庆还是田间地头，弦子舞都是他们表达情感、赞美生活的方式。</p></div>
+                            <div class="dish-item" id="lincang-wazu-muguwenhua"><h3 class="dish-name">临沧.佤族.木鼓文化<span class="dish-origin"></span></h3><figure class="dish-image"><img src="images/human-8.jpg" alt="佤族木鼓"></figure><p class="dish-description">木鼓是佤族的通天神器和民族象征，被视为能够与神灵沟通的媒介。从选材、制作到“拉木鼓”、“敲木鼓”，都伴随着隆重而神秘的祭祀仪式。木鼓的声音在佤族社会中传递着集会、报警、庆典等重要信息。</p></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2. 右侧：垂直导航侧边栏 -->
+            <aside class="theme-sidebar">
+                <nav class="vertical-nav-card">
+                    <a href="theme_food.html" class="nav-item"><i class="fa-solid fa-utensils"></i><span class="nav-item-text">美食寻味</span></a>
+                    <a href="theme_scenery.html" class="nav-item"><i class="fa-solid fa-mountain-sun"></i><span class="nav-item-text">必游景点</span></a>
+                    <a href="theme_humanities.html" class="nav-item"><i class="fa-solid fa-users"></i><span class="nav-item-text">人文故事</span></a>
+                    <a href="theme_culture.html" class="nav-item"><i class="fa-solid fa-palette"></i><span class="nav-item-text">文化体验</span></a>
+                </nav>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 模块四：底部的亮点推荐卡片区 -->
+    <section class="highlight-section-modern content-section">
+        <div class="container container-cards">
+            <h2 class="section-title">四大必体验人文风情</h2>
+            <div class="modern-cards-container">
+                <a href="#" class="modern-card"><img src="images/human-1.jpeg" alt="泼水节"><div class="card-overlay"><h3>傣族泼水节</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/slide-3.jpg" alt="火把节"><div class="card-overlay"><h3>彝族火把节</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/human-4.jpg" alt="东巴文化"><div class="card-overlay"><h3>纳西东巴文化</h3></div></a>
+                <a href="#" class="modern-card"><img src="images/human-2.jpeg" alt="白族三月街"><div class="card-overlay"><h3>白族三月街</h3></div></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- 页脚保持不变 -->
+    <footer>
+        <div class="container">
+             <p>© 202400300355</p>
+        </div>
+    </footer>
+
+    <!-- 引入JS文件 -->
+    <script src="search-data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

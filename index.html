@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个网页</title>
+    <!-- 链接到样式文件 -->
+       <!-- ▼▼▼ 引入拆分后的多个CSS文件 ▼▼▼ -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- ▲▲▲ 链接顺序很重要 ▲▲▲ -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>彩云之南欢迎您！</h1>
+            <!-- ▼▼▼ 搜索框 ▼▼▼ -->
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="请输入关键词">
+                <button id="search-button">搜索</button>
+                <div id="search-results-container"></div>
+            </div>
+            <!-- ▲▲▲ 搜索框结束 ▲▲▲ -->
+
+            <!-- ▼▼▼ 导航栏 ▼▼▼ -->
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            <!-- ▲▲▲ 导航栏 ▲▲▲ -->
+            
+
+        </div>     
+    </header>
+
+ 
+
+    <main>
+        <!-- ▼▼▼ 图片轮播区域 ▼▼▼ -->
+        <div class="carousel-container full-width-hero">
+
+            <!-- 幻灯片 1 -->
+            <div class="carousel-slide-item active">
+                <img src="images/slide-1.jpg" alt="云南壮丽的山水" class="carousel-background">
+                <div class="carousel-text-content">
+                    <h2 class="carousel-title">探索自然的奇迹</h2>
+                    <p class="carousel-subtitle">从雪山之巅到热带雨林，发现未曾踏足的风景。</p>
+                    <a href="theme_scenery.html" class="carousel-cta-button">查看必游景点</a>
+                </div>
+            </div>
+
+            <!-- 幻灯片 2 -->
+            <div class="carousel-slide-item">
+                <img src="images/slide-2.jpg" alt="诱人的云南美食" class="carousel-background">
+                <div class="carousel-text-content">
+                    <h2 class="carousel-title">品味舌尖上的云南</h2>
+                    <p class="carousel-subtitle">每一道菜，都是一个民族的故事与风情。</p>
+                    <a href="theme_food.html" class="carousel-cta-button">开启美食之旅</a>
+                </div>
+            </div>
+
+            <!-- 幻灯片 3 -->
+            <div class="carousel-slide-item">
+                <img src="images/slide-3.jpg" alt="丰富的人文节庆" class="carousel-background">
+                <div class="carousel-text-content">
+                    <h2 class="carousel-title">沉浸于活着的风情</h2>
+                    <p class="carousel-subtitle">参与一场节庆，感受这片土地的热情与心跳。</p>
+                    <a href="theme_humanities.html" class="carousel-cta-button">了解人文故事</a>
+                </div>
+            </div>
+
+            <!-- 幻灯片 4 -->
+            <div class="carousel-slide-item">
+                <img src="images/slide-4.jpg" alt="精湛的文化遗产" class="carousel-background">
+                <div class="carousel-text-content">
+                    <h2 class="carousel-title">触摸千年的文脉</h2>
+                    <p class="carousel-subtitle">从指尖的技艺到古老的文字，体验文化的深度。</p>
+                    <a href="theme_culture.html" class="carousel-cta-button">体验独特文化</a>
+                </div>
+            </div>
+
+            <!-- 左右箭头按钮  -->
+            <button class="carousel-btn btn-prev">《</button>
+            <button class="carousel-btn btn-next">》</button>
+
+            <!-- 导航小圆点  -->
+            <div class="carousel-dots"></div>
+
+        </div>
+        <!-- ▲▲▲ 图片轮播区域结束 ▲▲▲ -->
+
+        <!-- ▼▼▼ 交互式地图模块 ▼▼▼ -->
+            <section class="interactive-map-section">
+                <div class="container">
+                    <h2 class="section-title">点击地图上的州/市，探索云南</h2>
+                    
+                    <!-- 1. 地图容器 -->
+                    <div class="image-map-container">
+                        <!-- ▼▼▼ 完整的云南地图热区 (共16个) ▼▼▼ -->
+                            <ul class="map-hotspots">
+                                <!-- 西北区域 -->
+                                <li style="top: 12%; left: 24%; width: 9%; height: 12%;">
+                                    <a href="https://baike.baidu.com/item/%E8%BF%AA%E5%BA%86%E8%97%8F%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/661022" title="迪庆藏族自治州"></a>
+                                </li>
+                                <li style="top: 15%; left: 16%; width: 8%; height: 23%;">
+                                    <a href="https://baike.baidu.com/item/%E6%80%92%E6%B1%9F%E5%82%88%E5%83%B3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/10533271" title="怒江傈僳族自治州"></a>
+                                </li>
+                                <li style="top: 22%; left: 35%; width: 10%; height: 17%;">
+                                    <a href="https://baike.baidu.com/item/%E4%B8%BD%E6%B1%9F%E5%B8%82/3727097" title="丽江市"></a>
+                                </li>
+
+                                <!-- 西南区域 -->
+                                <li style="top: 48%; left: 9%; width: 8%; height: 20%;">
+                                    <a href="https://baike.baidu.com/item/%E5%BE%B7%E5%AE%8F%E5%82%A3%E6%97%8F%E6%99%AF%E9%A2%87%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/10533259" title="德宏傣族景颇族自治州"></a>
+                                </li>
+                                <li style="top: 47%; left: 18%; width: 10%; height: 16%;">
+                                    <a href="https://baike.baidu.com/item/%E4%BF%9D%E5%B1%B1%E5%B8%82/744251" title="保山市"></a>
+                                </li>
+                                <li style="top: 63%; left: 23%; width: 12%; height: 11%;">
+                                    <a href="https://baike.baidu.com/item/%E4%B8%B4%E6%B2%A7%E5%B8%82/5747943" title="临沧市"></a>
+                                </li>
+
+                                <!-- 中部区域 -->
+                                <li style="top: 39%; left: 27%; width: 12%; height: 10%;">
+                                    <a href="https://baike.baidu.com/item/%E5%A4%A7%E7%90%86%E7%99%BD%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/2916136" title="大理白族自治州"></a>
+                                </li>
+                                <li style="top: 40%; left: 43%; width: 12%; height: 19%;">
+                                    <a href="https://baike.baidu.com/item/%E6%A5%9A%E9%9B%84%E5%BD%9D%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/2376785" title="楚雄彝族自治州"></a>
+                                </li>
+                                <li style="top: 71%; left: 34%; width: 14%; height: 11%;">
+                                    <a href="https://baike.baidu.com/item/%E6%99%AE%E6%B4%B1%E5%B8%82/1287464" title="普洱市"></a>
+                                </li>
+                                <li style="top: 84%; left: 35%; width: 15%; height: 15%;">
+                                    <a href="https://baike.baidu.com/item/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/5622791" title="西双版纳傣族自治州"></a>
+                                </li>
+
+                                <!-- 东北区域 -->
+                                <li style="top: 16%; left: 65%; width: 16%; height: 11%;">
+                                    <a href="https://baike.baidu.com/item/%E6%98%AD%E9%80%9A%E5%B8%82/2506155" title="昭通市"></a>
+                                </li>
+                                <li style="top: 36%; left: 66%; width: 10%; height: 21%;">
+                                    <a href="https://baike.baidu.com/item/%E6%9B%B2%E9%9D%96%E5%B8%82/10665156" title="曲靖市"></a>
+                                </li>
+
+                                <!-- 东南区域 -->
+                                <li style="top: 38%; left: 56%; width: 10%; height: 21%;">
+                                    <a href="https://baike.baidu.com/item/%E6%98%86%E6%98%8E%E5%B8%82/406229" title="昆明市"></a>
+                                </li>
+                                <li style="top: 59%; left: 52%; width: 12%; height: 10%;">
+                                    <a href="https://baike.baidu.com/item/%E7%8E%89%E6%BA%AA%E5%B8%82/744471" title="玉溪市"></a>
+                                </li>
+                                <li style="top: 69%; left: 55%; width: 16%; height: 12%;">
+                                    <a href="https://baike.baidu.com/item/%E7%BA%A2%E6%B2%B3%E5%93%88%E5%B0%BC%E6%97%8F%E5%BD%9D%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/2522812" title="红河哈尼族彝族自治州"></a>
+                                </li>
+                                <li style="top: 63%; left: 70%; width: 18%; height: 12%;">
+                                    <a href="https://baike.baidu.com/item/%E6%96%87%E5%B1%B1%E5%A3%AE%E6%97%8F%E8%8B%97%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E/7440604" title="文山壮族苗族自治州"></a>
+                                </li>
+                            </ul>
+                            <!-- ▲▲▲ 热区代码结束 ▲▲▲ -->
+                    </div>
+                </div>
+            </section>
+            <!-- ▲▲▲ 交互式地图模块结束 ▲▲▲ -->
+               
+        <div class="home-content-wrapper"> 
+              <section class="home-section">
+                <div class="container">
+                    <h2 class="section-title">开启你的探索之旅</h2>
+                    <!-- 使用了 vertical-nav-card 的结构，用新样式让它横向排列 -->
+                    <nav class="home-categories-nav"> 
+                        <a href="theme_food.html" class="nav-item">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span class="nav-item-text">美食寻味</span>
+                        </a>
+                        <a href="theme_scenery.html" class="nav-item">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            <span class="nav-item-text">必游景点</span>
+                        </a>
+                        <a href="theme_humanities.html" class="nav-item">
+                            <i class="fa-solid fa-users"></i>
+                            <span class="nav-item-text">人文故事</span>
+                        </a>
+                        <a href="theme_culture.html" class="nav-item">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="nav-item-text">文化体验</span>
+                        </a>
+                    </nav>
+                </div>
+            </section>
+
+
+        </div>
+        
+    </main>
+
+    <footer>
+         <div class="container">
+            <p>© 202400300355</p>
+         </div>
+        
+    </footer>
+
+     <!--引入JavaScript文件-->
+     <script src="search-data.js"></script> <!-- 必须在 script.js 之前引入 -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>
