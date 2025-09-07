@@ -1,0 +1,19 @@
+/* --- responsive.css - 网站的响应式布局 --- */
+
+
+@media (max-width: 600px) {
+    .search-container {
+        float: none;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #search-results-container {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        top: 150px; /* 小屏幕下header变高，需要往下移动 */
+    }
+}

@@ -1,0 +1,173 @@
+/* --- layout.css - 网站整体布局 --- */
+/* 定义了 header, footer, main, .container 等页面骨架的样式 */
+
+header, footer {
+    text-align: center;
+    color: white;
+    padding: 1rem 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        /* 重要：路径已从 'images/...' 更新为 '../images/...' */
+        url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* 确保 header 的定位上下文依然存在 */
+}
+
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        /* 重要：路径已从 'images/...' 更新为 '../images/...' */
+        url('../images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* 告诉 main 元素“成长”并填满所有可用空间 */
+}
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-cards{
+    max-width: 1200px;
+}
+
+
+
+/* --- 关于页面 - 左右分栏布局 --- */
+.about-layout {
+    display: flex;
+    gap: 40px; /* 左右两栏之间的间距 */
+    margin-top: 30px;
+    align-items: flex-start; /* 关键：让两栏从顶部对齐 */
+    justify-content: center; /*  让 flex 项目在主轴上居中对齐  */
+}
+
+/* 左侧内容区 */
+.about-main-content {
+    flex: 3; /* 左侧占据约 3/4 的空间 */
+    /* .info-card 的样式保持不变，所以这里不需要额外样式 */
+}
+
+/* 右侧侧边栏 */
+.about-sidebar {
+    flex: 1; /* 右侧占据约 1/4 的空间 */
+    position: sticky; /* 关键：实现侧边栏滚动时固定的“粘性”效果 */
+    top: 20px; /* 当滚动时，距离顶部 20px 的位置固定 */
+}
+
+
+/* --- 新的垂直导航卡片样式 (已适配 Font Awesome) --- */
+.vertical-nav-card {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 100px 10px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* 单个导航项 */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    padding: 20px 10px;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+    background-color: rgba(73, 158, 243, 0.868);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* ▼▼▼ 为 Font Awesome 图标 (i 标签) 添加样式 ▼▼▼ */
+.nav-item i {
+    font-size: 48px; /* 控制图标大小 */
+    color: #545555; /* 设置图标颜色 */
+    margin-bottom: 15px; /* 图标与文字之间的间距 */
+    width: 60px; /* 给图标一个固定的宽度，使其对齐 */
+    text-align: center; /* 确保图标在宽度内居中 */
+}
+
+/* 导航项文字 */
+.nav-item-text {
+    font-size: 16px;
+    font-weight: 600; /* 字体稍粗 */
+    text-align: center;
+}
+
+
+/* --- 响应式布局调整 --- */
+@media (max-width: 992px) {
+    .about-layout {
+        flex-direction: column-reverse; /* 关键：垂直堆叠，并且把导航放在内容上方 */
+    }
+
+    .about-sidebar {
+        position: static; /* 在小屏幕上取消粘性定位 */
+        width: 100%;
+    }
+
+    /* 在小屏幕上，导航变为横向排列 */
+    .vertical-nav-card {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 15px;
+    }
+
+    .nav-item {
+        flex: 1; /* 让每个导航项平分空间 */
+    }
+
+    .nav-item-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* ▼▼▼ 为特定页面提供一个更宽的容器布局 ▼▼▼ */
+.container-wide {
+    max-width: 1400px; /* 将最大宽度从 800px 扩展到 1200px */
+}
+
+
+/* --- 主题子页面 - 详情页两栏布局 --- */
+.theme-detail-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 40px 0; /* 给这个区域上下一些留白 */
+}
+
+/* 右侧侧边栏 (与 about 页面共享大部分样式) */
+.theme-sidebar {
+    flex: 1; /* 占据约 1/4 空间 */
+    max-width: 300px; /* 限制最大宽度，避免过宽 */
+    position: sticky;
+    top: 20px;
+}
